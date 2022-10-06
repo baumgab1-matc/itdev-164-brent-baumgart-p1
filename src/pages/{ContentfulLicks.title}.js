@@ -3,8 +3,11 @@ import React from 'react'
 import Layout from '../components/Layout';
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import {FaFireAlt} from 'react-icons/fa'
+import styled from 'styled-components';
 
 
+// This is the actual page that has the licks and info about the lick
+// this creates a template for those pages
 const TemplateForLicks = ({data = []}) => {
     const {title, description, metronome, content, image, level, trending} = data.contentfulLicks;
     const imagePath = getImage(image);
@@ -17,7 +20,7 @@ return <Layout>
         <div className="container">
         <div className="row text-center">
             <div className="col-sm-8">
-               <GatsbyImage className='tab-image img-fluid' image={imagePath} alt={title} />
+               <Image className='img-fluid' image={imagePath} alt={title} />
             </div>
             <div className="col-sm-4">
                 {/* title and description */}
@@ -31,7 +34,7 @@ return <Layout>
                 <div className="row">
                     {tags.map((tag, idx) => {
                         return <div key={idx} className='col-sm p-2'> 
-                            <button type="button" className="btn btn-dark tag-button" disabled>{tag}</button>
+                            <TagButton type="button" className="btn btn-dark" disabled>{tag}</TagButton>
                         </div>
                     })}
                 </div>
@@ -52,6 +55,7 @@ return <Layout>
 
         <div className="row">
             {/* Notes  */}
+            <h2 id='notes-header'>Notes</h2>
             <div className="col-sm-8">
                 <ul>
                     {notes.map((note, idx) => {
@@ -61,11 +65,6 @@ return <Layout>
                     })}
                 </ul>
             </div>
-
-                {/* TODO add audio files here  */}
-            {/* <div className="col-sm-4 text-center">
-                <h4>Listen</h4>
-            </div> */}
         </div>
 
 
@@ -73,6 +72,15 @@ return <Layout>
     </section>
   </Layout>
 }
+
+const TagButton = styled.button`
+    width: 150px;
+`
+
+const Image = styled(GatsbyImage)`
+    max-width: 700px;
+    max-height: 400px;
+`
 
 export const query = graphql`
  query getLickByTitle($title: String) {

@@ -3,6 +3,9 @@ import Categories from '../components/Categories';
 import Layout from "../components/Layout"
 import LicksByLevel from '../components/LicksByLevel';
 
+// page to show the categories
+//can either find licks by level(beginner, intermediate, advanced) or by tags (warm up, shred ...etc)
+
 const category = () => {
 
   return<Layout>

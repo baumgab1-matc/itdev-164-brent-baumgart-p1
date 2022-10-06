@@ -1,3 +1,5 @@
+
+/* override just a couple bootstrap classes for my needs, makes more just to do it here than a styled componenet */
 .active-link {
     font-weight: bold;
     text-transform: uppercase;
@@ -11,18 +13,17 @@
     margin-left: 50px;
 }
 
-.tab-image {
-    max-width: 700px;
-    max-height: 400px;
-}
 
-.tag-button {
-    width:150px;
-}
 
 @media only screen and (max-width: 993px) {
     .navbar-nav {
         margin-left: 0px;
         margin-bottom: 20px;
     }
-  }
+}
+
+@media only screen and (max-width: 575px) {
+    #notes-header {
+        text-align: center;
+    }
+}

@@ -5,7 +5,6 @@ import 'bootstrap/dist/js/bootstrap'
 import "normalize.css"
 
 import "../data/css/styles.css"
-import Footer from './Footer'
 
 
 const Layout = ({children}) => {

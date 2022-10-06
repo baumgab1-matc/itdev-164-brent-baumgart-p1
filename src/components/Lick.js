@@ -3,6 +3,7 @@ import React from 'react'
 import { StaticImage } from "gatsby-plugin-image"
 import slugify from "slugify"
 
+// Component that acts a card to show each lick
 const Lick = (prop) => {
   const {image, description, title, id} = prop.lick;
   const slug = slugify(title, { lower: true });

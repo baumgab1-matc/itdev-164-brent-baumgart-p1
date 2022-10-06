@@ -3,6 +3,9 @@ import { graphql } from "gatsby"
 import Layout from "../components/Layout"
 import Lick from "../components/Lick"
 
+// Creates pages for the tags
+// gatsby-node.js was created for this page
+
 const TagTemplate = ({ data, pageContext }) => {
   const licks = data.allContentfulLicks.nodes;
 

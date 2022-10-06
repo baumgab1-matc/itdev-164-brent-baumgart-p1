@@ -2,6 +2,8 @@ import { graphql, useStaticQuery } from 'gatsby'
 import React from 'react'
 import Lick from './Lick';
 
+// Shows licks that are trending on the homepage
+
 const trendingQuery = graphql`
   {
     allContentfulLicks(filter: {trending: {eq: true}}) {

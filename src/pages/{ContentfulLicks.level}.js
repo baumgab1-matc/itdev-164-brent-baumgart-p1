@@ -3,6 +3,8 @@ import React from 'react'
 import Layout from '../components/Layout';
 import Lick from '../components/Lick';
 
+// Each level(beginner, intermediate, advanced) will have it's own page with all the licks in that category
+// this creates a template for those pages
 const TemplateForLevels = ({data =[]}) => {
   const licks = data.allContentfulLicks.nodes;
   let title = "Sorry, no licks found for that level";

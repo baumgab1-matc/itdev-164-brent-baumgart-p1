@@ -2,6 +2,8 @@ import React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
 import Category from './Category';
 
+// In categories page, this componet shows all licks by a tag (warm up, alternate picking ...etc)
+
 // Gets all categories/tag and loops through them
 const categoryQuery = graphql`
   {
