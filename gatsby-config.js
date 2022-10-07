@@ -36,3 +36,8 @@ module.exports = {
     }
   ]
 }
+
+// Site is local, so not sure if you need these to see my content data, nothing senstive is being hosted so not to worried about
+// having token and id posted
+// SPACE_ID=q1xxzf1yzmyw
+// ACCESS_TOKEN=RzGs1-XTNXQn7gYQ262PNtMBGYfDOo09gel4DaZQRfg
